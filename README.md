@@ -1,6 +1,174 @@
+> **Disclaimer**: Please Note that this is a research project. I am by no means responsible for any usage of this tool. Use on your own behalf. I'm also not responsible if your accounts get banned due to extensive use of this tool.
+
+<img src="https://i.imgur.com/sJzfZsL.jpg" width="150" align="right">
+
+# InstaPy
+[![MIT license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/timgrossmann/InstaPy/blob/master/LICENSE)
+[![built with Selenium](https://img.shields.io/badge/built%20with-Selenium-yellow.svg)](https://github.com/SeleniumHQ/selenium)
+[![built with Python3](https://img.shields.io/badge/built%20with-Python3-red.svg)](https://www.python.org/)
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://travis-ci.org/timgrossmann/InstaPy)
+[![Backers on Open Collective](https://opencollective.com/instapy/backers/badge.svg)](#backers)
+[![Sponsors on Open Collective](https://opencollective.com/instapy/sponsors/badge.svg)](#sponsors)
+
+### Tooling that automates your social media interactions to “farm” Likes, Comments, and Followers on Instagram
+Implemented in Python using the Selenium module.
+
+**Have an issue?**
+If you should encounter any issue, please first [search for similar issues](https://github.com/timgrossmann/InstaPy/issues) and only if you can't find any, create a new issue or use the [discord channel](https://discord.gg/FDETsht) for help.
+
+#### Newsletter: [Sign Up for the Newsletter here!](http://eepurl.com/cZbV_v)
+#### Get the Offical Video Guide: [Get it here!](https://www.udemy.com/instapy-guide/?couponCode=INSTAPY_OFFICIAL)
+
+## **Installation**
+```elm
+pip install instapy
+```
+That's it 🍫☕
+
+<br />
+
+Now all you need is a **quickstart** script to start _InstaPy_ 🥳  
+
+<details>
+  <summary> <b>Choose a <b>quickstart</b> script of your choice from the <a href="https://github.com/InstaPy/instapy-quickstart">instapy-quickstart</a> repository to get started 🔎</b></summary>
+
+- Here is the easiest **quickstart** script you can use - [quickstart.py](https://github.com/InstaPy/instapy-quickstart/blob/master/quickstart.py)  
+- And here you can find lots of _sophisticated **quickstart** templates_ shared by the community! - [quickstart templates 📂](https://github.com/InstaPy/instapy-quickstart/tree/master/quickstart_templates)  
+
+<br /> 
+
+You can also copy and paste this basic **quickstart** into a new text file and save it as `.py` file.
+```python		
+""" Quickstart script for InstaPy usage """		
+# imports		
+from instapy import InstaPy		
+from instapy import smart_run		
+	
+# get an InstaPy session!		
+session = InstaPy()		
+	
+with smart_run(session):		
+    """ Activity flow """		
+    # general settings		
+    session.set_dont_include(["friend1", "friend2", "friend3"])		
+	
+    # activity		
+    session.like_by_tags(["natgeo"], amount=10)		
+```
+
+</details>
+
+<br />
+
+🛰 As you've downloaded a **quickstart** script into your computer, go ahead and run it in the command prompt as:
+```elm
+python quickstart.py --username abc --password 123
+```
+>**PRO**:  
+Read more about passing arguments from the command line interface in the section - [Pass arguments by CLI](#pass-arguments-by-cli).
+
+<br />
+
+##### 🚁 You can provide _username_ & _password_ inside the **quickstart** script, too!
+```python
+# inside quickstart script
+
+session = InstaPy(username="abc",    
+                  password="123")   
+```
+
+<br />
+
+🛸 Also, if you like to run _InstaPy_ in **background**, just enable the **headless** mode!
+```erlang
+python quickstart.py -u abc -p 123 --headless-browser
+```
+Or do it right inside the **quickstart** script.
+```python
+# inside quickstart script
+
+session = InstaPy(username="abc",    
+                  password="123",
+                  headless_browser=True)  
+```
+_Until you enable the **headless** mode, InstaPy will run in the **graphical** mode where you can watch the ongoing automation in your web browser_.
+
+
+> If you've used _InstaPy_ before installing it by **pip**, you have to move your _old_ data to the new **workspace** folder for once.
+[Read how to do this here](#migrating-your-data-to-the-workspace-folder).
+
+<br />
+
+#### **Update**
+```elm
+
+pip install instapy -U
+
+```
+
+#### **Install** a _**specific** version_
+```elm
+pip install instapy==0.1.1
+```
+
+#### **Uninstall**
+```elm
+pip uninstall instapy
+```
+
+<br />
+
+--- 
+
+### Social
+
+#### [Twitter of InstaPy](https://twitter.com/InstaPy) | [Twitter of Tim](https://twitter.com/timigrossmann) | [How it works (Medium)](https://medium.freecodecamp.com/my-open-source-instagram-bot-got-me-2-500-real-followers-for-5-in-server-costs-e40491358340) |   
+[Talk about automating your Instagram](https://youtu.be/4TmKFZy-ioQ) | [Talk about doing Open-Source work](https://www.youtube.com/watch?v=A_UtST302Og&t=0s&list=PLa4P1NPX9hthXV-wko0xyxFpbhYZFkW7o) | [Listen to the "Talk Python to me"-Episode](https://talkpython.fm/episodes/show/142/automating-the-web-with-selenium-and-instapy)
+
+### Do you need help ?
+
+<a href="https://discord.gg/FDETsht">
+  <img hspace="3" alt="Discord channel" src="https://camo.githubusercontent.com/e4a739df27356a78e9cae2e2dda642d118567e7c/68747470733a2f2f737465616d63646e2d612e616b616d616968642e6e65742f737465616d636f6d6d756e6974792f7075626c69632f696d616765732f636c616e732f32373039303534312f386464356339303766326130656563623733646336613437373666633961323538373865626364642e706e67" width=214/>
+</a>
+
+### Do you want to support us ?
+
+<a href="https://opencollective.com/instapy/donate" target="_blank">
+  <img align="left" hspace="10" src="https://opencollective.com/instapy/contribute/button@2x.png?color=blue" width=300 />
+</a>
+
+<a href="https://www.paypal.me/supportInstaPy">
+  <img hspace="14" alt="paypalme" src="http://codeinpython.com/tutorials/wp-content/uploads/2017/09/PayPal-ME-300x300.jpg.png" width=100 />
+</a>
+
+**Help build InstaPy!**      
+Check out this short guide on [how to start contributing!](https://github.com/InstaPy/instapy-docs/blob/master/CONTRIBUTORS.md).
+
+---
+
+### Guides
+
+#### Video tutorials:
+**[Official InstaPy Guide on Udemy](https://www.udemy.com/instapy-guide/?couponCode=INSTAPY_OFFICIAL)**
+
+**[Installation on Windows](https://www.youtube.com/watch?v=9DkEl2MrFQk&list=PLa4P1NPX9hthXV-wko0xyxFpbhYZFkW7o&index=11&t=40s)**
+
+**[Installation on MacOS](https://www.youtube.com/watch?v=TqQWM63Hhh4&t=11s&list=PLa4P1NPX9hthXV-wko0xyxFpbhYZFkW7o&index=12)**
+
+**[Installation on Linux](https://www.youtube.com/watch?v=sZ-SFy9vKHg&list=PLa4P1NPX9hthXV-wko0xyxFpbhYZFkW7o&index=10&t=28s)**
+
+**[Installation on DigitalOcean Server](https://www.youtube.com/watch?v=my0FM5hra_s&t=14s&list=PLa4P1NPX9hthXV-wko0xyxFpbhYZFkW7o&index=9)**
+
+#### Written Guides:
+**[How to Ubuntu (64-Bit)](https://github.com/InstaPy/instapy-docs/blob/master/How_Tos/How_To_DO_Ubuntu_on_Digital_Ocean.md) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**
+
+**[How to RaspberryPi](https://github.com/InstaPy/instapy-docs/blob/master/How_Tos/How_to_Raspberry.md) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**
+
+
 # Documentation
 
 ### Table of Contents
+* [Advanced Installation](#advanced-installation)
 * [InstaPy Available Features](#instapy-available-features)
   * [Commenting](#commenting)
   * [Following](#following)
@@ -17,6 +185,7 @@
   * [Interact on posts at given URLs](#interact-on-posts-at-given-urls)
   * [Interact by Comments](#interact-by-comments)
   * [Unfollowing](#unfollowing)
+  * [Accept pending follow requests](#accept-pending-follow-requests)
   * [Remove outgoing follow requests](#remove-outgoing-follow-requests)
   * [Don't unfollow active users](#dont-unfollow-active-users)
   * [Interactions based on the number of followers and/or following a user has](#interactions-based-on-the-number-of-followers-andor-following-a-user-has)
@@ -26,8 +195,10 @@
   * [Commenting based on the number of existing comments a post has](#commenting-based-on-the-number-of-existing-comments-a-post-has)
   * [Commenting based on mandatory words in the description or first comment](#commenting-based-on-mandatory-words-in-the-description-or-first-comment)
   * [Comment by Locations](#comment-by-locations)
+  * [Follow by Locations](#follow-by-locations)
   * [Like by Locations](#like-by-locations)
   * [Like by Tags](#like-by-tags)
+  * [Follow by Tags](#follow-by-tags)
   * [Like by Feeds](#like-by-feeds)
   * [Mandatory Words](#mandatory-words)
   * [Mandatory Language](#mandatory-language)
@@ -37,6 +208,7 @@
   * [Excluding friends](#excluding-friends)
   * [Blacklist Campaign](#blacklist-campaign)
   * [Smart Hashtags](#smart-hashtags)
+  * [Smart Location Hashtags](#smart-location-hashtags)
   * [Follow/Unfollow/exclude not working?](#followunfollowexclude-not-working)
   * [Bypass Suspicious Login Attempt](#bypass-suspicious-login-attempt)
   * [Quota Supervisor](#quota-supervisor)
@@ -50,7 +222,8 @@
 * [Text Analytics](#text-analytics)
   *  [Yandex Translate API](#yandex-translate-api)
   *  [MeaningCloud Sentiment Analysis API](#meaningcloud-sentiment-analysis-api)
-* [Use a proxy](#use-a-proxy)
+* [Use a proxy (Chrome)](#use-a-proxy-chrome)
+* [Use a proxy (Firefox)](#use-a-proxy-firefox)
 * [Switching to Firefox](#switching-to-firefox)
 * [Emoji Support](#emoji-support)
 * [Clarifai ImageAPI](#clarifai-imageapi)
@@ -76,7 +249,197 @@
   * [Changing DB or Chromedriver locations](#changing-db-or-chromedriver-locations)
   * [Custom action delays](#custom-action-delays)
   * [How to avoid _python_ & **pip** confusion](#how-to-avoid-python--pip-confusion)
+  * [Pods](#pods)
   * [Pass arguments by CLI](#pass-arguments-by-cli)
+
+### Advanced Installation
+#### 🛠 Install or update to the unreleased version  
+For example, there is a **bug** and its **fix** is _merged to the repo_ but a newer version of _InstaPy_ [_containing_ that **fix**] is not yet released to _PyPI_ to be able to be _installed_ or _updated_ by **pip**.  
+
+Then, you can do this to install the **actual state** of the _repo_ 😋
+```erlang
+pip install -I https://github.com/timgrossmann/InstaPy/zipball/master
+```
+
+Worths to note that, this installation option does not require _Git_ to be installed, too.  
+`-I` flag in there is used to _ignore the installed_ packages and _reinstall_ them instead.  
+
+<details>
+  <summary>
+    <b>
+      Learn why <code>-I</code> flag is required 🔎
+    </b>
+  </summary>
+
+Since _InstaPy_'s version is not yet being incremented which is the reason you're installing it from a _zipball_, then if you don't use the `-I` flag, **pip** will complain saying,  
+- "_Hey, I have already installed the x.y.z version! Skipping installation..._"  
+
+But obviously, even though the version is the same, _zipball_ has the current state of the repository.  
+That's why you will be able to install the actual state of the repo using the `-I` flag.
+
+</details>
+
+<br />
+
+>**PRO** Tip:  
+  Read the section - [How to avoid _python_ & **pip** confusion](#how-to-avoid-python--pip-confusion) 😄
+
+<br />
+
+#### ⚗ Install manually and manage using advanced git commands
+###### For those who want to tweak or enhance _InstaPy_.
+
+**1**. Clone _InstaPy_ repository into your computer
+```erlang
+git clone https://github.com/timgrossmann/InstaPy.git
+```
+
+**2**. Navigate to the _InstaPy_ project root directory
+```erlang
+cd InstaPy
+```
+
+**3**. Install the _local_ **instapy** package
+```erlang
+pip install -e .
+```
+<details>
+  <summary>
+    <b>
+      Learn why <code>-e</code> flag is required 🔎
+    </b>
+  </summary>
+
+Since you're gonna install the local version of _InstaPy_ you'll probably change its code per your need which is the reason you do an advanced installation from a _Git_ source, then if you don't use the `-e` flag, you'll have to install that local package by **pip** every time after making a change.  
+
+But fortunately, `-e` flag comes to help;  
+`-e` means _editable_ install, so that after editing files you don't need to re-install the package again since it will always refer to the edited files cos with the _editable_ install, it just **links** the project's location to **pip**'s install location _rather than_ adding them to **pip** location separately..
+<br />
+</details>
+or
+
+```erlang
+python setup.py install
+```
+
+<br />
+
+#### ⛑ Install into a Virtual Environment
+
+###### The best way to install _InstaPy_ is to create a virtual environment and install _InstaPy_ there, then, run it from a separate file.
+
+<details>
+  <summary>
+    <b>
+      Guide for <b>Pythons</b> >= 3.6 🔎
+    </b>
+  </summary>
+
+##### Mac/Linux
+
+**1**. Clone _InstaPy_ repository into your computer
+```erlang
+git clone https://github.com/timgrossmann/InstaPy.git
+```
+
+**2**. Navigate to the _InstaPy_ project root directory
+```erlang
+cd InstaPy
+```
+
+**3**. Make a virtual environment
+```erlang
+python3 -m venv venv
+```
+
+**4**. Activate the virtual environment
+```erlang
+source venv/bin/activate
+```
+
+**5**. Install the _local_ **instapy** package
+```erlang
+pip install -e .
+```
+
+
+
+##### Windows
+
+**1**. Clone _InstaPy_ repository into your computer
+```erlang
+git clone https://github.com/timgrossmann/InstaPy.git
+```
+
+**2**. Navigate to the _InstaPy_ project root directory
+```erlang
+cd InstaPy
+```
+
+**3**. Make a virtual environment
+```erlang
+python3 -m venv venv
+```
+
+**4**. Activate the virtual environment
+```erlang
+venv\Scripts\activate.bat
+```
+
+**5**. Install the _local_ **instapy** package
+```erlang
+pip install -e .
+```
+
+
+If you're not _familiar_ with **venv**, please [read about it here](https://docs.python.org/3/library/venv.html) and use it to your advantage;    
+
+- Running `source venv/bin/activate` will _activate_ the correct _python_ to run _InstaPy_. To exit an activated **venv** run `deactivate`.  
+- Now, copy & paste the **quickstart.py** _python_ code below and then run your first _InstaPy_ script.  
+  Remember to run it with _python_ from the **venv**.  
+- To make sure which _python_ is used, run `which python` which will tell you the active version of _python_.  
+- Whenever you run the script, the virtual environment must be _active_.
+
+</details>
+
+
+<details>
+  <summary>
+    <b>
+      Guide for <b>Pythons</b> < 3.6 🔎
+    </b>
+  </summary>
+
+**1**. Make a virtual environment
+```erlang
+virtualenv venv
+```
+
+**2**. Activate the virtual environment
+```erlang
+source venv/bin/activate
+```
+
+**3**. Install the **instapy** package from _Git_ by using **pip**
+```erlang
+pip install git+https://github.com/timgrossmann/InstaPy.git
+```
+
+
+If you're not _familiar_ with **virtualenv**, please [read about it here](https://virtualenv.pypa.io/en/stable/) and use it to your advantage;  
+
+In essence,    
+ - This is be the **only** _python_ library you should install as `root` (_e.g., with `sudo`_).  
+ - All other _python_ libraries should be inside a **virtualenv**.  
+ - Running `source venv/bin/activate` will activate the correct _python_ to run _InstaPy_.  
+  And to exit an activated **virtualenv** run `deactivate`.  
+ - Now, copy & paste the **quickstart.py** _python_ code below and run your first _InstaPy_ script.  
+ Remember to run it with _python_ from the **virtualenv**, so from **venv/bin/python**.  
+ - To make sure which _python_ is used, run `which python` which would tell you the active version of _python_.
+
+</details>
+
+<br />
 
 ## InstaPy Available Features
 
@@ -185,12 +548,36 @@ session.follow_user_followers(['friend1', 'friend2', 'friend3'], amount=10, rand
 
 
 ### Follow by Tags
-
+#####  Follow user based on hashtags (without liking the image)
 ```python
-# Follow user based on hashtags (without liking the image)
-
-session.follow_by_tags(['tag1', 'tag2'], amount=10)
+session.follow_by_tags(['tag1', 'tag2'], amount=10),
 ```
+#####  Follow user based on hashtags (interact with user, liking images)
+* You can also **interact** with the users you just started by activating `interact = True`, which will use the `set_user_interact` configuration:
+```python
+session.set_user_interact(amount=2,
+                            percentage=70,
+                            randomize=True,
+                            media='Photo')
+session.follow_by_tags(['tag1', 'tag2'], amount=10, interact=True),
+```
+
+#### Parameters:
+`tags`: The tags that will be searched for and posts will be liked from
+
+`amount`: The amount of posts that will be liked
+
+`skip_top_posts`: Determines whether the first 9 top posts should be liked or not (default is True)
+
+`use_smart_hashtags`: Make use of the [smart hashtag feature]()
+
+`use_smart_location_hashtags`: Make use of the [smart location hashtag feature]()
+
+`interact`: Defines whether the users of the given post should also be interacted with (needs `set_user_interact` to be also set)
+
+`randomize`: Determines whether the first `amount` of posts should be liked or a random selection.
+
+`media`: Determines which media should be liked, Photo or Video (default is `None` which is all)
 
 
 
@@ -423,7 +810,7 @@ session.set_use_meaningcloud(enabled=True, license_key='', polarity="P")
 session.set_use_yandex(enabled=True, API_key='', match_language=True, language_code="en")
 
 session.set_do_comment(enabled=True, percentage=14)
-session.set_reply_comments(replies=[u"😎😎😎", u"😁😁😁😁😁😁😁💪🏼"], media="Photo")
+session.set_comment_replies(replies=[u"😎😎😎", u"😁😁😁😁😁😁😁💪🏼"], media="Photo")
 
 session.set_user_interact(amount=2, percentage=70, randomize=False, media="Photo")
 session.set_do_like(enabled=True, percentage=100)
@@ -527,7 +914,28 @@ session.unfollow_users(amount=200, allFollowing=True, style="FIFO", unfollow_aft
 ```
 _here the unfollow method- **alFollowing** is used_
 
+`delay_followbackers`  
+Delay the unfollow for users that follows you, the delay is in seconds and will delay from the moment that we "checked" to unfollow the user.
+It will add the delay_followbackers seconds on top of that.   
+0 seconds == disabled   
+864000 (or `240*60*60`) = 10 days delay  
 
+```python
+session.unfollow_users(amount=60, InstapyFollowed=(True, "all"), style="FIFO", unfollow_after=48*60*60, delay_followbackers=240*60*60)
+```
+This will unfollow all users that are not following you back after **2 days**. The unfollowing for users that are following you back will be **delayed by an additional 10 days** (12 days to unfollow in total).
+
+### Accept pending follow requests
+
+```python
+session.accept_follow_requests(amount=100, sleep_delay=1)
+```
+
+`amount`   
+The maximum amount of follow requests that will be accepted.
+
+`sleep_delay`  
+Sleep delay _sets_ the time it will sleep **after** every accepted request (_default delay is ~ `1` second).
 
 ### Remove outgoing follow requests
 
@@ -551,14 +959,14 @@ session.set_dont_unfollow_active_users(enabled=True, posts=5)
 ##### This is used to check the number of _followers_ and/or _following_ a user has and if these numbers _either_ **exceed** the number set OR **does not pass** the number set OR if **their ratio does not reach** desired potency ratio then no further interaction happens
 ```python
 session.set_relationship_bounds(enabled=True,
-				 potency_ratio=1.34,
-				  delimit_by_numbers=True,
-				   max_followers=8500,
-				    max_following=4490,
-				     min_followers=100,
-				      min_following=56,
-				       min_posts=10,
-                max_posts=1000)
+                                potency_ratio=1.34,
+                                delimit_by_numbers=True,
+                                max_followers=8500,
+                                max_following=4490,
+                                min_followers=100,
+                                min_following=56,
+                                min_posts=10,
+                                max_posts=1000)
 ```
 Use `enabled=True` to **activate** this feature, and `enabled=False` to **deactivate** it, _any time_  
 `delimit_by_numbers` is used to **activate** & **deactivate** the usage of max & min values  
@@ -596,7 +1004,7 @@ session.set_relationship_bounds(enabled=True, potency_ratio=-1.44, delimit_by_nu
 #### This is used to check number of posts of a user and skip if they aren't in the boundaries provided
 ```python
 session.set_relationship_bounds(min_posts=10,
-                                 max_posts=1000)
+                                max_posts=1000)
 ```
 Users that have more than 1000 posts or less than 10 will be discarded
 
@@ -651,8 +1059,8 @@ You can set a percentage of skipping:
 ```python
 session.set_skip_users(skip_private=True,
                        skip_no_profile_pic=True,
-		               skip_business=True,
-		               business_percentage=100)
+                       skip_business=True,
+                       business_percentage=100)
 ```
 This will skip all users that have business account activated.
 You can set a percentage of skipping:
@@ -680,7 +1088,7 @@ session.set_skip_users(skip_private=True,
 This will skip all business accounts except the ones that have a category that matches one item in the list of _dont_skip_business_categories_
 **N.B.** If both _dont_skip_business_categories_ and _skip_business_categories_, InstaPy will skip only business accounts in the list given from _skip_business_categories_.
 
-> [A list of all availlable business categories can be found here](./assets/business_categories.md)
+> [A list of all availlable business categories can be found here](https://github.com/InstaPy/instapy-docs/blob/master/BUSINESS_CATEGORIES.md)
 
 ### Liking based on the number of existing likes a post has
 
@@ -755,6 +1163,18 @@ session.comment_by_locations(['224442573'], amount=5, skip_top_posts=False)
 This method allows commenting by locations, without liking posts. To get locations follow instructions in 'Like by Locations'
 
 
+### Follow by Locations
+
+```python
+session.follow_by_locations(['224442573/salton-sea/'], amount=100)
+# or
+session.follow_by_locations(['224442573'], amount=100)
+# or include media entities from top posts section
+
+session.follow_by_locations(['224442573'], amount=5, skip_top_posts=False)
+```
+This method allows following by locations, without liking or commenting posts. To get locations follow instructions in 'Like by Locations'
+
 
 ### Like by Locations
 
@@ -766,6 +1186,7 @@ session.like_by_locations(['224442573'], amount=100)
 
 session.like_by_locations(['224442573'], amount=5, skip_top_posts=False)
 ```
+
 
 You can find locations for the `like_by_locations` function by:
 - Browsing https://www.instagram.com/explore/locations/
@@ -783,6 +1204,24 @@ Example:
 # Like posts based on hashtags
 session.like_by_tags(['natgeo', 'world'], amount=10)
 ```
+
+#### Parameters:
+`tags`: The tags that will be searched for and posts will be liked from
+
+`amount`: The amount of posts that will be liked
+
+`skip_top_posts`: Determines whether the first 9 top posts should be liked or not (default is True)
+
+`use_smart_hashtags`: Make use of the [smart hashtag feature]()
+
+`use_smart_location_hashtags`: Make use of the [smart location hashtag feature]()
+
+`interact`: Defines whether the users of the given post should also be interacted with (needs `set_user_interact` to be also set)
+
+`randomize`: Determines whether the first `amount` of posts should be liked or a random selection.
+
+`media`: Determines which media should be liked, Photo or Video (default is `None` which is all)
+
 
 ### Like by Tags and interact with user
 
@@ -835,6 +1274,22 @@ session.like_by_tags(['soccer', 'cr7', 'neymar'], amount=100, media='Photo')
 session.set_smart_hashtags(['cycling', 'roadbike'], limit=3, sort='top', log_tags=True)
 session.like_by_tags(amount=10, use_smart_hashtags=True)
 ```
+
+### Smart Location Hashtags
+Generate smart hashtags based on https://displaypurposes.com/map ranking.
+Banned and spammy tags are filtered out.
+
+```python
+Use_smart_location_hashtags activates like_by_tag to use smart hashtags
+
+session.set_smart_location_hashtags(['204517928/chicago-illinois', '213570652/nagoya-shi-aichi-japan'], radius=20, limit=10)
+session.like_by_tags(amount=10, use_smart_location_hashtags=True)
+```
+
+#### Parameters
+`radius`: Radius around the location in Miles   
+`limit`: Defines amount limit of generated hashtags by hashtag   
+`log_tags`: Shows generated hashtags before use it (default is True)   
 
 ### Mandatory Words
 
@@ -930,12 +1385,16 @@ InstaPy(username=insta_username, password=insta_password, bypass_suspicious_atte
 ###### Take full control of the actions with the most sophisticated approaches
 
 ```python
-session.set_quota_supervisor(enabled=True, sleep_after=["likes", "comments_d", "follows", "unfollows", "server_calls_h"], sleepyhead=True, stochastic_flow=True, notify_me=True,
-                              peak_likes=(57, 585),
-                               peak_comments=(21, 182),
-                                peak_follows=(48, None),
-                                 peak_unfollows=(35, 402),
-                                  peak_server_calls=(None, 4700))
+session.set_quota_supervisor(enabled=True,
+                             sleep_after=["likes", "comments_d", "follows", "unfollows", "server_calls_h"],
+                             sleepyhead=True,
+                             stochastic_flow=True,
+                             notify_me=True,
+                             peak_likes=(57, 585),
+                             peak_comments=(21, 182),
+                             peak_follows=(48, None),
+                             peak_unfollows=(35, 402),
+                             peak_server_calls=(None, 4700))
 ```
 #### Parameters:
 `enabled`: put `True` to **activate** or `False` to **deactivate** supervising any time
@@ -1018,7 +1477,7 @@ session.set_quota_supervisor(enabled=True, peak_follows=(56, 660), peak_unfollow
 ###### Gets and returns `followers` of the given user in desired amount, also can save locally  
 ```python
 popeye_followers = session.grab_followers(username="Popeye", amount="full", live_match=True, store_locally=True)
-##now, `popeye_followers` variable which is a list- holds the `Followers` data of "Popeye" at requested time
+# now, `popeye_followers` variable which is a list- holds the `Followers` data of "Popeye" at requested time
 ```  
 #### Parameters:  
 `username`:  
@@ -1060,12 +1519,12 @@ _If the data is requested at the range **else than** `"full"`, it will write **t
 There are **several** `use cases` of this tool for **various purposes**.  
 _E.g._, inside your **quickstart** script, you can **do** _something like this_:
 ```python
-#get followers of "Popeye" and "Cinderella"
+# get followers of "Popeye" and "Cinderella"
 popeye_followers = session.grab_followers(username="Popeye", amount="full", live_match=True, store_locally=True)
 sleep(600)
 cinderella_followers = session.grab_followers(username="Cinderella", amount="full", live_match=True, store_locally=True)
 
-#find the users following "Popeye" WHO also follow "Cinderella" :D
+# find the users following "Popeye" WHO also follow "Cinderella" :D
 popeye_cinderella_followers = [follower for follower in popeye_followers if follower in cinderella_followers]
 ```
 
@@ -1078,7 +1537,7 @@ You can **use** this tool to take a **backup** of _your_ **or** _any other user'
 ###### Gets and returns `following` of the given user in desired amount, also can save locally  
 ```python
 lazySmurf_following = session.grab_following(username="lazy.smurf", amount="full", live_match=True, store_locally=True)
-##now, `lazySmurf_following` variable which is a list- holds the `Following` data of "lazy.smurf" at requested time
+# now, `lazySmurf_following` variable which is a list- holds the `Following` data of "lazy.smurf" at requested time
 ```  
 #### Parameters:  
 `username`:  
@@ -1120,15 +1579,15 @@ _If the data is requested at the range **else than** `"full"`, it will write **t
 There are **several** `use cases` of this tool for **various purposes**.  
 _E.g._, inside your **quickstart** script, you can **do** _something like this_:
 ```python
-##as we know that all lazy Smurf care is to take some good rest, so by mistake, he can follow somebody WHOM Gargamel also follow!
-#so let's find it out to save Smurfs from troubles! :D
+# as we know that all lazy Smurf care is to take some good rest, so by mistake, he can follow somebody WHOM Gargamel also follow!
+# so let's find it out to save Smurfs from troubles! :D
 
-#get following of "lazy.smurf" and "Gargamel"
+# get following of "lazy.smurf" and "Gargamel"
 lazySmurf_following = session.grab_following(username="lazy.smurf", amount="full", live_match=True, store_locally=True)
 sleep(600)
 gargamel_following = session.grab_following(username="Gargamel", amount="full", live_match=True, store_locally=True)
 
-#find the users "lazy.smurf" is following WHOM "Gargamel" also follow :D
+# find the users "lazy.smurf" is following WHOM "Gargamel" also follow :D
 lazySmurf_gargamel_following = [following for following in lazySmurf_following if following in gargamel_following]
 ```
 
@@ -1141,8 +1600,8 @@ You can **use** this tool to take a **backup** of _your_ **or** _any other user'
 ###### Compares the `followers` stored in a local storage against current followers and returns absent followers
 ```python
 all_unfollowers, active_unfollowers = session.pick_unfollowers(username="Bernard_bear", compare_by="month", compare_track="first", live_match=True, store_locally=True, print_out=True)
-##now, `all_unfollowers` and `all_unfollowers` variables which are lists- hold the `Unfollowers` data of "Bernard_bear" at requested time
-#`all_unfollowers` holds all of the unfollowers WHILST `active_unfollowers` holds the unfollowers WHOM "Bernard_bear" is still following
+# now, `all_unfollowers` and `all_unfollowers` variables which are lists- hold the `Unfollowers` data of "Bernard_bear" at requested time
+# `all_unfollowers` holds all of the unfollowers WHILST `active_unfollowers` holds the unfollowers WHOM "Bernard_bear" is still following
 ```
 #### Parameters:  
 `username`:  
@@ -1207,10 +1666,10 @@ And then, e.g. do some `useful` **analysis** with that _generated unfollowers da
 + _And_ you can also **find** the unfollowers to `block` them **all**.
 + Also, you can **unfollow back** those `active unfollowers` _right away_:
 ```python
-#find all of the active unfollowers of Bernard bear
+# find all of the active unfollowers of Bernard bear
 all_unfollowers, active_unfollowers = session.pick_unfollowers(username="Bernard_bear", compare_by="earliest", compare_track="first", live_match=True, store_locally=True, print_out=True)
 sleep(200)
-#let's unfollow them immediately cos Bernard will be angry if heards about those unfollowers! :D
+# let's unfollow them immediately cos Bernard will be angry if heards about those unfollowers! :D
 session.unfollow_users(amount=len(active_unfollowers), customList=(True, active_unfollowers, "all"), style="RANDOM", unfollow_after=None, sleep_delay=600)
 ```
 
@@ -1220,7 +1679,7 @@ session.unfollow_users(amount=len(active_unfollowers), customList=(True, active_
 ###### Compares the `Followers` data against `Following` data of a user and returns the `Nonfollowers` data
 ```python
 scoobyDoo_nonfollowers = session.pick_nonfollowers(username="ScoobyDoo", live_match=True, store_locally=True)
-#now, `scoobyDoo_nonfollowers` variable which is a list- holds the `Nonfollowers` data of "ScoobyDoo" at requested time
+# now, `scoobyDoo_nonfollowers` variable which is a list- holds the `Nonfollowers` data of "ScoobyDoo" at requested time
 ```
 #### Parameters:  
 `username`:  
@@ -1256,10 +1715,10 @@ There are **several** `use cases` of this tool for **various purposes**.
 + You can get the nonfollowers of several users and then do analysis.  
     + _e.g., in this example Scooby Do used it like this_:  
     ```python
-    ##Scooby Doo always wonders a lot and this time he wonders if there are people Shaggy is following WHO do not follow him back...
+    # Scooby Doo always wonders a lot and this time he wonders if there are people Shaggy is following WHO do not follow him back...
     shaggy_nonfollowers = session.pick_nonfollowers(username="Shaggy", live_match=True, store_locally=True)
 
-    #now Scooby Doo will tell his friend Shaggy about this, who knows, maybe Shaggy will unfollow them all or even add to block :D
+    # now Scooby Doo will tell his friend Shaggy about this, who knows, maybe Shaggy will unfollow them all or even add to block :D
     ```  
 
 
@@ -1268,7 +1727,7 @@ There are **several** `use cases` of this tool for **various purposes**.
 ###### Returns Fans data- all of the accounts who do follow the user WHOM user itself do not follow back
 ```python
 smurfette_fans = session.pick_fans(username="Smurfette", live_match=True, store_locally=True)
-#now, `smurfette_fans` variable which is a list- holds the `Fans` data of "Smurfette" at requested time
+# now, `smurfette_fans` variable which is a list- holds the `Fans` data of "Smurfette" at requested time
 ```
 #### Parameters:  
 `username`:  
@@ -1304,9 +1763,9 @@ There are **several** `use cases` of this tool for **various purposes**.
 + You can get the fans of several users and then do analysis.  
     + _e.g., in this example Smurfette used it like this_:  
     ```python
-    ##Smurfette is so famous in the place and she wonders which smurfs is following her WHOM she doesn't even know of :D
+    # Smurfette is so famous in the place and she wonders which smurfs is following her WHOM she doesn't even know of :D
     smurfette_fans = session.pick_fans(username="Smurfette", live_match=True, store_locally=True)
-    #and now, maybe she will follow back some of the smurfs whom she may know :P
+    # and now, maybe she will follow back some of the smurfs whom she may know :P
     ```  
 
 
@@ -1315,7 +1774,7 @@ There are **several** `use cases` of this tool for **various purposes**.
 ###### Returns `Mutual Following` data- all of the accounts who do follow the user WHOM user itself **also** do follow back
 ```python
 Winnie_mutualFollowing = session.pick_mutual_following(username="WinnieThePooh", live_match=True, store_locally=True)
-#now, `Winnie_mutualFollowing` variable which is a list- holds the `Mutual Following` data of "WinnieThePooh" at requested time
+# now, `Winnie_mutualFollowing` variable which is a list- holds the `Mutual Following` data of "WinnieThePooh" at requested time
 ```
 #### Parameters:  
 `username`:  
@@ -1351,9 +1810,9 @@ There are **several** `use cases` of this tool for **various purposes**.
 + You can get the mutual following of several users and then do analysis.  
     + _e.g., in this example Winnie The Pooh used it like this_:  
     ```python
-    #Winnie The Pooh is a very friendly guy and almost everybody follows him back, but he wants to be sure about it :D
+    # Winnie The Pooh is a very friendly guy and almost everybody follows him back, but he wants to be sure about it :D
     Winnie_mutual_following = session.pick_mutual_following(username="WinnieThePooh", live_match=True, store_locally=True)
-    ##now, he will write a message to his mutual followers to help him get a new honey pot :>
+    # now, he will write a message to his mutual followers to help him get a new honey pot :>
     ```  
 
 
@@ -1555,16 +2014,18 @@ This project uses MeaningCloud™ (http://www.meaningcloud.com) for Text Analyti
 
 
 
-### Use a proxy
+### Use a proxy (Chrome)
 
 You can use InstaPy behind a proxy by specifying server address and port
 
+Simple proxy setup example:
 ```python
 session = InstaPy(username=insta_username, password=insta_password, proxy_address='8.8.8.8', proxy_port=8080)
 ```
 
-To use proxy with authentication you should firstly generate proxy chrome extension (works only with headless_browser=False unless using FF where it works with headless_browser=True).
+To use proxy with authentication you should firstly import proxy chrome extension to you configuration file (the one with your Instagram username and password).
 
+Proxy setup using authentication example:
 ```python
 from proxy_extension import create_proxy_extension
 
@@ -1572,6 +2033,31 @@ proxy = 'login:password@ip:port'
 proxy_chrome_extension = create_proxy_extension(proxy)
 
 session = InstaPy(username=insta_username, password=insta_password, proxy_chrome_extension=proxy_chrome_extension, nogui=True)
+```
+
+### Use a proxy (Firefox)
+
+You can use InstaPy behind a proxy by specifying server address, port and/or proxy authentication credentials. It works with and without ```headless_browser``` option.
+
+Simple proxy setup example:
+```python
+session = InstaPy(username=insta_username, 
+                  password=insta_password,
+		  use_firefox=True,
+		  proxy_address='8.8.8.8', 
+		  proxy_port=8080)
+
+```
+
+Proxy setup with authentication example:
+```python
+session = InstaPy(username=insta_username,
+                  password=insta_password,
+                  proxy_username='',
+                  proxy_password='',
+                  proxy_address='8.8.8.8',
+                  proxy_port=4444,
+                  use_firefox=True)
 ```
 
 ### Switching to Firefox
@@ -1948,29 +2434,33 @@ pip install schedule
 
 ```python
 from instapy import InstaPy
+from instapy import smart_run
+from instapy import set_workspace
 import schedule
 import time
 
+# your login credentials
+insta_username=''
+insta_password=''
+
+# path to your workspace
+set_workspace(path=None)
+
 def job():
-    try:
-        session = InstaPy(selenium_local_session=False) # Assuming running in Compose
-        session.set_selenium_remote_session(selenium_url='http://selenium:4444/wd/hub')
-        session.login()
-        session.set_do_comment(enabled=True, percentage=20)
-        session.set_comments(['Well done!'])
-        session.set_do_follow(enabled=True, percentage=5, times=2)
-        session.like_by_tags(['love'], amount=100, media='Photo')
-        session.end()
-    except:
-        import traceback
-        print(traceback.format_exc())
+  session = InstaPy(username=insta_username, password=insta_password)
+  with smart_run(session):
+    session.set_do_comment(enabled=True, percentage=20)
+    session.set_comments(['Well done!'])
+    session.set_do_follow(enabled=True, percentage=5, times=2)
+    session.like_by_tags(['love'], amount=100, media='Photo')
+
 
 schedule.every().day.at("6:35").do(job)
 schedule.every().day.at("16:22").do(job)
 
 while True:
-    schedule.run_pending()
-    time.sleep(1)
+  schedule.run_pending()
+  time.sleep(10)
 ```
 
 
@@ -2067,7 +2557,7 @@ the `get_workspace()` function,
 from instapy import InstaPy
 from instapy import smart_run
 from instapy import set_workspace
-from isntapy import get_workspace
+from instapy import get_workspace
 
 set_workspace(path="C:\\Custom\\Path\\InstaPy_super\\")
 
@@ -2169,10 +2659,10 @@ Use the Quota Supervisor feature to set some fixed limits for the bot for maximu
 ##### During indirect data retrieval, **simulation** happens to provide a _genuine_ activity flow triggered by a wise algorithm.  
 To **turn off** simulation or to **decrease** its occurrence frequency, use `set_simulation` setting:  
 ```python
-#use the value of `False` to permanently turn it off
+# use the value of `False` to permanently turn it off
 session.set_simulation(enabled=False)
 
-#use a desired occurrence percentage
+# use a desired occurrence percentage
 session.set_simulation(enabled=True, percentage=66)
 ```
 
@@ -2187,7 +2677,7 @@ To do this simply pass the `disable_image_load=True` parameter in the InstaPy co
 session = InstaPy(username=insta_username,
                   password=insta_password,
                   headless_browser=False,
-		              disable_image_load=True,
+                  disable_image_load=True,
                   multi_logs=True)
 ```
 
@@ -2215,10 +2705,10 @@ Settings.chromedriver_location = '/path/to/chromedriver'
 ##### But you can set a _custom_ sleep delay for each action yourself by using the `set_action_delays` setting!
 ```python
 session.set_action_delays(enabled=True,
-                           like=3,
-                           comment=5,
-                           follow=4.17,
-                           unfollow=28)
+                          like=3,
+                          comment=5,
+                          follow=4.17,
+                          unfollow=28)
 ```
 _Now it will sleep `3` seconds **after putting every single like**, `5` seconds for every single comment and similarly for the others.._
 
@@ -2304,6 +2794,36 @@ python -m pip show instapy
 
 Using this style, you will never have to worry about what is the correct alias of the **pip** for you specific _python_ installation and all you have to know is just the _python_'s alias you use.  
 
+
+### Pods
+
+In case you are unfamiliar with the concept do read a little. Here's a blog to learn more about [Pods](https://blog.hubspot.com/marketing/instagram-pods)
+
+```python
+
+photo_comments = ['Nice shot! @{}',
+                  'I love your profile! @{}',
+                  'Your feed is an inspiration :thumbsup:',
+                  'Just incredible :open_mouth:',
+                  'What camera did you use @{}?',
+                  'Love your posts @{}',
+                  'Looks awesome @{}',
+                  'Getting inspired by you @{}',
+                  ':raised_hands: Yes!',
+                  'I can feel your passion @{} :muscle:']
+
+session = InstaPy()
+
+with smart_run(session):
+    session.set_comments(photo_comments, media='Photo')
+    session.join_pods()
+```
+
+#### Parameters:  
+`topic`:  
+Topic of the posts to be interacted with. `general` by default.
+
+> Note :  Topics allowed are {'general', 'beauty', 'food', 'travel', 'sports', 'entertainment'}. But it is highly recomended to use 'general' till we gain sufficient users in each of the topics.
 
 
 ### Pass arguments by CLI
@@ -2463,5 +2983,6 @@ Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com
 Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/instapy#sponsor)]
 
 <a href="https://opencollective.com/instapy/sponsor/0/website" target="_blank"><img src="https://opencollective.com/instapy/sponsor/0/avatar.svg"></a>
-
-
+<a href="https://www.chancetheapp.com" target="_blank">
+	<img src="https://user-images.githubusercontent.com/16529337/52699787-dbb17f80-2f76-11e9-9657-c103d4e89d88.png" height=75 />
+</a>
