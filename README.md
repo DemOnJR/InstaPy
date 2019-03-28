@@ -2963,7 +2963,7 @@ python quickstart.py -u abc
 ---
 ###### Have Fun & Feel Free to report any issues  
 ---
-
+<div id="credits">
 ## Credits
 
 ### Contributors
@@ -2986,3 +2986,4 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 <a href="https://www.chancetheapp.com" target="_blank">
 	<img src="https://user-images.githubusercontent.com/16529337/52699787-dbb17f80-2f76-11e9-9657-c103d4e89d88.png" height=75 />
 </a>
+</div>
