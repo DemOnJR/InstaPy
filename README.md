@@ -2963,7 +2963,9 @@ python quickstart.py -u abc
 ---
 ###### Have Fun & Feel Free to report any issues  
 ---
-<div id="credits">
+
+<div id="credits-daemon">
+
 ## Credits
 
 ### Contributors
